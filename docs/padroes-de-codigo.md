@@ -190,3 +190,18 @@ export default function MeuComponente() {
   return <Logo />
 }
 ```
+
+### Testes
+
+Os testes dos styled components serão feitos usando snapshot quando o estilo é fixo.
+
+```typescript
+import Home from "../src/app/page";
+import "@testing-library/jest-dom";
+import {render, screen} from "@testing-library/react";
+
+ test('Home DEVE ser igual ao snapshot', () => {
+    const { container } = render(<Home />);
+    expect(container).toMatchSnapshot();
+ });
+```
