@@ -17,12 +17,12 @@ As branches principais são:
 - O time poderá sugerir mudanças nessas regras periodicamente
 - Em casos específicos, o time pode decidir utilizar uma regra diferente que mais se atende à necessidade
 
-
 ## Commit
 
 ```shell
 yarn run commit
 ```
+
 <div style="background: black; padding: 12px;">
 <h3>Deve escolher qual tipo vai ser o commit:</h3>
 </br>
@@ -93,17 +93,17 @@ A organização de arquivos do projeto será feita por **features**
 
 - public
   - icon
-      - icon.svg
+    - icon.svg
   - image
     - image.svg
 - src
-   - components/
-    - Botao/
-      - Botao.tsx
-      - Botao.spec.tsx
-      - Botao.styles.tsx
-      - Botao.styles.spec.tsx
-      - index.ts
+  - components/
+  - Botao/
+    - Botao.tsx
+    - Botao.spec.tsx
+    - Botao.styles.tsx
+    - Botao.styles.spec.tsx
+    - index.ts
   - context/
     - Context/
       - Context.reducer.spec.ts
@@ -118,9 +118,9 @@ A organização de arquivos do projeto será feita por **features**
   - infrastructure
     - api/
       api.ts
-   - resources/
-    - cores.ts
-    - fonts.ts
+  - resources/
+  - cores.ts
+  - fonts.ts
   - services/
     - service/
       - index.ts
@@ -157,14 +157,15 @@ O nome dos componentes seguem o padrão **_Pascalcase_** e deverão ter a extens
 Os componentes devem ser exportados como _default_ nos respectivos arquivos index.ts
 
 ```ts
-import MeuComponente from './MeuComponente'
+import MeuComponente from './MeuComponente';
 
-export default MeuComponente
+export default MeuComponente;
 ```
+
 ou
 
 ```ts
-export * from './MeuComponente'
+export * from './MeuComponente';
 ```
 
 ## Interfaces
@@ -173,7 +174,7 @@ As interfaces no Typescript deverão começar com `I`. ex.: `OrdemDeServico`
 
 ```typescript
 export interface IOrdemDeServico {
-  nome: string
+  nome: string;
 }
 ```
 
@@ -184,10 +185,10 @@ Antes importar os itens SVG do figma usar esse site https://jakearchibald.github
 > Obs: Deixar as configurações padrão e habilitar a opção Prefer viewBox to width/height
 
 ```typescript
-import Logo from '@assets/images/logo.svg'
+import Logo from '@assets/images/logo.svg';
 
 export default function MeuComponente() {
-  return <Logo />
+  return <Logo />;
 }
 ```
 
@@ -196,12 +197,12 @@ export default function MeuComponente() {
 Os testes dos styled components serão feitos usando snapshot quando o estilo é fixo.
 
 ```typescript
-import Home from "../src/app/page";
-import "@testing-library/jest-dom";
-import {render, screen} from "@testing-library/react";
+import Home from '../src/app/page';
+import '@testing-library/jest-dom';
+import {render, screen} from '@testing-library/react';
 
- test('Home DEVE ser igual ao snapshot', () => {
-    const { container } = render(<Home />);
-    expect(container).toMatchSnapshot();
- });
+test('Home DEVE ser igual ao snapshot', () => {
+  const {container} = render(<Home />);
+  expect(container).toMatchSnapshot();
+});
 ```

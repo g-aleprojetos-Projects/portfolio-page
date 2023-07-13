@@ -9,6 +9,7 @@
 <h2>Setup</h2>
 
 - Ferramentas necessárias:
+
   - Visual Studio Code
   - Git
   - npm (8.3.1)
@@ -37,5 +38,5 @@ npm install
 <h3>Executar o projeto na máquina local</h3>
 
 ```shell
-npm run dev 
+npm run dev
 ```
