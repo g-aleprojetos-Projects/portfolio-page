@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "jest --watchAll",
+    "test": "jest",
+    "test-watchAll": "jest --watchAll",
     "dev": "next dev",
     "commit": " git-cz ",
     "prettier": "npx prettier . --write",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install~"
   },
   "dependencies": {
     "@types/node": "20.4.1",
@@ -31,12 +33,14 @@
     "@commitlint/config-conventional": "^17.6.6",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^5.0.0",
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
     "jest": "^29.6.1",
     "jest-environment-jsdom": "^29.6.1",
+    "lint-staged": "^13.2.3",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.4.0"
   },
