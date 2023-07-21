@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Renderização Home DEVE ser igual ao snapshot 1`] = `
+<div>
+  <h1
+    data-testid="teste_home"
+  >
+    Hello world!
+  </h1>
+</div>
+`;
